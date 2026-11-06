@@ -44,6 +44,3 @@ See ReadEasily in action:
 
 https://github.com/user-attachments/assets/a1d8c0b3-f527-4cac-862e-379dd0893d07
 
-<p align="center">
-  Currently supports English language webpages only.
-</p>
