@@ -32,9 +32,7 @@ When you come across difficult English online, getting a simpler explanation oft
 </p>
 
 
-## Demo
-
-See ReadEasily in action:
+## See ReadEasily in Action
 
 https://github.com/user-attachments/assets/a1d8c0b3-f527-4cac-862e-379dd0893d07
 
