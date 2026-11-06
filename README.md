@@ -25,11 +25,12 @@ When you come across difficult English online, getting a simpler explanation oft
 
 **ReadEasily brings that step into your browser.** Highlight any passage, click **Simplify**, and see a plain English rewrite in a floating panel beside the page. no copy pasting, prompt writing, or tab switching required.
 
+<hr>
+
 <p align="center">
   <img src="ReadEasily_Before_After.png" alt="ReadEasily — Before and After." width="100%" />
 </p>
 
-<hr>
 
 ## Demo
 
