@@ -26,7 +26,16 @@ When you come across difficult English online, getting a simpler explanation oft
 
 **ReadEasily brings that step into your browser.** Highlight any passage, click **Simplify**, and see a plain English rewrite in a floating panel beside the page. no copy pasting, prompt writing, or tab switching required.
 
-It can help with academic articles, technical documentation, news, Wikipedia pages, and other difficult English writing. No copy pasting into another tab is required.
+**Use Cases of ReadEasily**
+- **Students and Academic Learning:** Simplify complicated textbook passages, research papers, and educational articles to understand difficult concepts more easily.
+- **Non-Native English Speakers:** Make advanced English vocabulary, complex sentences, and unfamiliar expressions easier to understand.
+- **News and Online Articles:** Simplify complicated news reports, opinion pieces, and lengthy explanations.
+- **Developers and Technical Documentation:** Understand complex technical explanations, software concepts, and programming documentation.
+- **Legal Documents and Policies:** Make terms and conditions, privacy policies, and legal language easier to read.
+- **Research and Scientific Reading:** Break down complex research abstracts, scientific terminology, and technical descriptions.
+- **Working Professionals:** Simplify business reports, professional articles, industry terminology, and formal documents.
+- **Accessibility and Reading Support:** Provide simpler wording for people who find dense or complicated text difficult to process.
+- **Wikipedia and General Knowledge:** Understand unfamiliar topics and complex explanations on informational websites.
 
 
 ## Demo
