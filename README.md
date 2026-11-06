@@ -17,7 +17,6 @@
   <code>Groq</code>
 </p>
 
---
 
 
 ## Why ReadEasily?
@@ -30,6 +29,7 @@ When you come across difficult English online, getting a simpler explanation oft
   <img src="ReadEasily_Before_After.png" alt="ReadEasily — Before and After." width="100%" />
 </p>
 
+<hr>
 
 ## Demo
 
