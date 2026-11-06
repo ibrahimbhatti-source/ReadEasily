@@ -31,4 +31,8 @@ When you come across difficult English online, getting a simpler explanation oft
 
 **ReadEasily brings that step into your browser.** Highlight any passage, click **Simplify**, and see a plain English rewrite in a floating panel beside the page. no copy pasting, prompt writing, or tab switching required.
 
+<video src="ReadEasily-Demo.mp4" controls width="100%" poster="optional-thumbnail.png">
+  Your browser does not support the video tag.
+</video>
+
 <p align="center"><strong>ReadEasily</strong> — Understand more. Read with ease.</p>
