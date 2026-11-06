@@ -1,0 +1,4 @@
+streamlit --> for ui
+langchain_core --> prompt template, outputparser, runnables
+langchain_groq --> for using groq api's
+load_env --> for loading enviorment variables

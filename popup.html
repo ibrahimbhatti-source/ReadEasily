@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>ReadEasily</title>
+
+  <style>
+    @font-face {
+        font-family: "Inter";
+        src: url("./fonts/InterVariable.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+    }
+
+    :root {
+      color-scheme: light;
+      --blue: #2457db;
+      --blue-dark: #1747c7;
+      --ink: #14243a;
+      --muted: #66758b;
+      --mint: #35c3a5;
+      --paper: #f5f7fb;
+      --border: #dce4ef;
+      --white: #fff;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      width: 356px;
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .popup { overflow: hidden; }
+
+    .top-line {
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue) 0 76%, var(--mint) 76% 100%);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 21px 24px 19px;
+    }
+
+    .brand-logo {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      display: block;
+      object-fit: contain;
+      border-radius: 11px;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.7px;
+    }
+
+    .brand-name span { color: var(--blue); }
+
+    .brand-subtitle {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 11.5px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 0 24px;
+      background: #edf0f5;
+    }
+
+    .content { padding: 21px 24px 22px; }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: -0.65px;
+    }
+
+    .description {
+      margin: 10px 0 0;
+      color: #5c6a7f;
+      font-size: 12.5px;
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .toggle-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 21px;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--white);
+      box-shadow: 0 3px 12px rgba(20, 36, 58, 0.045);
+      cursor: pointer;
+    }
+
+    .toggle-card:hover { border-color: #bfcfe5; }
+
+    .setting-copy { min-width: 0; }
+
+    .setting-heading {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .setting-description {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .switch {
+      position: relative;
+      width: 44px;
+      height: 26px;
+      flex: 0 0 44px;
+    }
+
+    .switch input {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .switch-track {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: #cbd3df;
+      transition: background .18s ease;
+    }
+
+    .switch-track::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--white);
+      box-shadow: 0 1px 3px rgba(20, 36, 58, .2);
+      transition: transform .18s ease;
+    }
+
+    .switch input:checked + .switch-track { background: var(--blue); }
+    .switch input:checked + .switch-track::after { transform: translateX(18px); }
+    .switch input:focus-visible + .switch-track {
+      outline: 3px solid #adc4ff;
+      outline-offset: 3px;
+    }
+
+    .guide {
+      margin-top: 18px;
+      padding: 14px 14px 15px;
+      background: var(--paper);
+      border-radius: 12px;
+    }
+
+    .guide-heading {
+      display: block;
+      margin-bottom: 11px;
+      font-size: 11.5px;
+      font-weight: 650;
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #526176;
+      font-size: 10.5px;
+      font-weight: 550;
+      white-space: nowrap;
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      border-radius: 6px;
+      background: #e7eeff;
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .step-arrow { color: #9aaac0; font-size: 15px; }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 12px 14px 14px;
+      border-top: 1px solid #edf0f5;
+      color: #738197;
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+
+    .footer-dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--mint);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .switch-track, .switch-track::after { transition: none; }
+    }
+
+    /* Force Inter typography throughout ReadEasily popup */
+
+    html,
+    body,
+    .popup,
+    .popup * {
+        font-family: "Inter", "Segoe UI", sans-serif !important;
+    }
+  </style>
+</head>
+<body>
+  <main class="popup">
+    <div class="top-line" aria-hidden="true"></div>
+
+    <header class="header">
+      <img
+        class="brand-logo"
+        src="imgs/ReadEasily-Icon-128.png"
+        alt="ReadEasily logo"
+        width="44"
+        height="44"
+      />
+      <div>
+        <h1 class="brand-name">Read<span>Easily</span></h1>
+        <p class="brand-subtitle">Complex English, made clear.</p>
+      </div>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="content" aria-label="ReadEasily controls">
+      <p class="eyebrow">Your reading companion</p>
+      <h2 class="headline">Understand more.<br />Read with ease.</h2>
+      <p class="description">
+        Turn difficult passages into plain English without leaving the page.
+      </p>
+
+      <label class="toggle-card" for="enabled">
+        <span class="setting-copy">
+          <span class="setting-heading">Enable ReadEasily</span>
+          <span class="setting-description">Show Simplify when you select text.</span>
+        </span>
+        <span class="switch">
+          <input id="enabled" type="checkbox" />
+          <span class="switch-track" aria-hidden="true"></span>
+        </span>
+      </label>
+
+      <div class="guide">
+        <span class="guide-heading">How it works</span>
+        <div class="steps" aria-label="Highlight, Simplify, Read clearly">
+          <span class="step"><span class="step-number">1</span>Highlight</span>
+          <span class="step-arrow" aria-hidden="true">›</span>
+          <span class="step"><span class="step-number">2</span>Simplify</span>
+          <span class="step-arrow" aria-hidden="true">›</span>
+          <span class="step"><span class="step-number">3</span>Read clearly</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-dot" aria-hidden="true"></span>
+      For articles, research, contracts &amp; more
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

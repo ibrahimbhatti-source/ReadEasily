@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "ReadEasily",
+  "version": "1.0.0",
+  "description": "Simplify complex English on any webpage without switching tabs.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "icons": {
+    "16": "imgs/ReadEasily-Icon-16.png",
+    "32": "imgs/ReadEasily-Icon-32.png",
+    "48": "imgs/ReadEasily-Icon-48.png",
+    "128": "imgs/ReadEasily-Icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "imgs/ReadEasily-Icon-16.png",
+      "32": "imgs/ReadEasily-Icon-32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "ReadEasily"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
