@@ -44,3 +44,6 @@ See ReadEasily in action:
 
 https://github.com/user-attachments/assets/a1d8c0b3-f527-4cac-862e-379dd0893d07
 
+## Additional Demo
+https://github.com/user-attachments/assets/6225de88-61ff-494e-93f4-0334f43c72ed
+
